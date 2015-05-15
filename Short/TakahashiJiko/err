@@ -1,0 +1,2 @@
+エラー: メイン・メソッドがクラスAで見つかりません。次のようにメイン・メソッドを定義してください。
+   public static void main(String[] args)

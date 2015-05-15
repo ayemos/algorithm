@@ -1,0 +1,40 @@
+i: 0
+c: (
+res: []
+i: 1
+c: s
+
+c: (
+res: [s]
+i: 3
+c: a
+
+c: ,
+,: [a]
+
+c: b
+
+c: )
+
+return: [a, b]
+
+returned: [a, b]
+
+c: c
+
+c: ,
+,: [sasc, sbsc]
+
+c: d
+
+c: )
+
+return: [sasc, sbsc, d]
+
+returned: [sasc, sbsc, d]
+
+return: [sasc, sbsc, d]
+
+sasc
+sbsc
+d

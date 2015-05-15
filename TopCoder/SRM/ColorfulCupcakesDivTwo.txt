@@ -1,0 +1,73 @@
+PROBLEM STATEMENT
+Beaver Bindu has N cupcakes.
+Each cupcake has one of three possible colors.
+In this problem we will represent the colors by uppercase letters 'A', 'B', and 'C'.
+Two cupcakes of the same color are indistinguishable.
+You are given a String cupcakes consisting of exactly N characters.
+Each character in cupcakes gives the color of one of Bindu's cupcakes.
+
+
+Bindu has N friends, sitting around a round table.
+She wants to give each friend one of the cupcakes.
+Moreover, she does not want to give cupcakes of the same color to any pair of friends who sit next to each other.
+
+
+Let X be the number of ways in which she can hand out the cupcakes to her friends.
+As X can be very large, compute and return the value (X modulo 1,000,000,007).
+
+DEFINITION
+Class:ColorfulCupcakesDivTwo
+Method:countArrangements
+Parameters:String
+Returns:int
+Method signature:int countArrangements(String cupcakes)
+
+
+NOTES
+-Formally, Bindu's friends can be labeled 0 through N-1 in such a way that friends i and (i+1 modulo N) are adjacent, for each i.
+
+
+CONSTRAINTS
+-cupcakes will contain between 3 and 50 characters, inclusive.
+-Each character in cupcakes will be either 'A', 'B', or 'C'.
+
+
+EXAMPLES
+
+0)
+"ABAB"
+
+Returns: 2
+
+The two valid ways of handing out the cupcakes are "ABAB" and "BABA".
+(I.e., in the first way, friends 0 and 2 will receive cupcake of color A; and friends 1 and 3 will receive cupcake of color B.
+The second way is exactly opposite.)
+
+
+1)
+"ABABA"
+
+Returns: 0
+
+Regardless of how she hands out the cupcakes, there will always be a pair of adjacent friends who both received a cupcake of color A.
+Hence, there are no valid arrangements of cupcakes.
+
+
+2)
+"ABC"
+
+Returns: 6
+
+Each of the six permutations of "ABC" corresponds to a valid arrangement.
+
+3)
+"ABABABABABABABABABABABABABABABABABABABABABABABABAB"
+
+Returns: 2
+
+
+
+4)
+"BCBABBACBABABCCCCCAABBAACBBBBCBCAAA"
+
+Returns: 741380640

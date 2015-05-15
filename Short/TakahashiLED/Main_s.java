@@ -1,0 +1,1 @@
+class Main{public static void main(String[]a){String[]s={"□■■■□", "■□□□■", "□□□□□", "□□□□■", "■□□□□"}; String[] d={"0112110","2332332","0330440","0330330","2110332","0440330","0440110","0332332","0110110","0110330"};try{int k=(System.in.read()-'0');for(int i=0;i<7;i++)System.out.println(s[d[k].charAt(i)-'0']);}catch(Exception e){}}}

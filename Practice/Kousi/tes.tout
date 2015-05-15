@@ -1,0 +1,61 @@
+candidate1
+px:py => 0:0
+qx:qy => 0:1
+x1:y1 => 1:0
+x2:y2 => 1:1
+candidate2
+px:py => 0:0
+qx:qy => 1:0
+x1:y1 => 0:1
+x2:y2 => 1:1
+candidate1
+px:py => 0:1
+qx:qy => 1:1
+x1:y1 => 0:0
+x2:y2 => 1:0
+candidate1
+px:py => 0:2
+qx:qy => 1:2
+x1:y1 => 0:1
+x2:y2 => 1:1
+candidate1
+px:py => 0:2
+qx:qy => 2:2
+x1:y1 => 0:0
+x2:y2 => 2:0
+candidate2
+px:py => 1:0
+qx:qy => 1:1
+x1:y1 => 0:0
+x2:y2 => 0:1
+candidate2
+px:py => 1:1
+qx:qy => 1:2
+x1:y1 => 0:1
+x2:y2 => 0:2
+candidate1
+px:py => 1:1
+qx:qy => 2:0
+x1:y1 => 0:0
+x2:y2 => 1:-1
+candidate1
+px:py => 1:1
+qx:qy => 2:1
+x1:y1 => 1:0
+x2:y2 => 2:0
+candidate1
+px:py => 1:2
+qx:qy => 2:1
+x1:y1 => 0:1
+x2:y2 => 1:0
+candidate2
+px:py => 2:0
+qx:qy => 2:1
+x1:y1 => 1:0
+x2:y2 => 1:1
+candidate2
+px:py => 2:0
+qx:qy => 2:2
+x1:y1 => 0:0
+x2:y2 => 0:2
+6
