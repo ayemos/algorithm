@@ -58,12 +58,14 @@ public class Main {
             costs[s-1][t-1] = y;
         }
 
+        /*
         for(int i = 0; i < n; i++) {
             for(int j = 0; j < n; j++) {
                 System.out.print(graph[j][i] + " ");
             }
             System.out.println();
         }
+        */
 
         Proc init = new Proc(1, c, 0);
         Deque<Proc> queue = new ArrayDeque<Proc>();
@@ -73,14 +75,11 @@ public class Main {
             Proc proc = queue.poll();
             if(proc.index == n) {
                 res = Math.min(res, proc.time);
-                System.out.println("new min: " + res);
                 continue;
             }
 
             int s = proc.index - 1;
             for(int t = 0; t < n; t++) {
-                if(s == 25)
-                    System.out.println(graph[s][t]);
                 if(graph[s][t] > 0 &&
                         costs[s][t] <= proc.money) {
                     // affordable
