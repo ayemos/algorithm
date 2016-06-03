@@ -9,7 +9,7 @@ Find the smallest prime which, by replacing part of the number (not necessarily 
 require 'prime'
 
 def solve(c)
-  1.step{|n|
+  100000.step{|n|
     max, maxarg = examine(n)
 
     if max == c
@@ -29,16 +29,13 @@ def examine(n)
 
   (1..digits - 1).each do |i|
     (0..digits - 1).to_a.combination(i) do |arr|
-      puts n
-      puts arr.to_s
-
-      c, smallest = count_prime(n, arr)
-      puts "c:#{c}"
-      puts "smallest:#{smallest}"
+      c, primes = count_prime(n, arr, digits)
+      puts c
+      puts primes.to_s
 
       if c >= max
         max = c
-        maxarg = smallest
+        maxarg = primes.min
       end
     end
   end
@@ -46,9 +43,8 @@ def examine(n)
   [max, maxarg]
 end
 
-def count_prime(n, targets=[])
+def count_prime(n, targets=[], digits)
   c = 0
-
   comb = 0
 
   targets.each do |t|
@@ -57,21 +53,19 @@ def count_prime(n, targets=[])
     n -= ((n / pow) % 10)* pow
   end
 
-  smallest = nil
+  primes = []
 
   10.times do |t|
-    if n.prime?
+    if n.prime? && count_digits(n) == digits
       c += 1
 
-      if smallest.nil?
-        smallest = n
-      end
+      primes << n
     end
 
     n += comb
   end
 
-  [c, smallest]
+  [c, primes]
 end
 
 if __FILE__ == $0
